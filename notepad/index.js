@@ -1,30 +1,26 @@
-// Array to keep track of notes with their expiration times
 const notes = [];
 
-// Function to add a new note
 function addNote() {
     let title = document.getElementById("title");
     let note = document.getElementById("note");
     let date = document.getElementById("date");
-    let input = [title, note, date]; // Inputs to validate
+    let input = [title, note, date];
 
     // Check if all inputs have values
-    if (title.value === "" || note.value === "" || date.value === "") {
-        // Add 'is-invalid' class to empty input fields
+    if (title.value === "" || note.value === "") {
         input.forEach(function (i) {
             if (i.value === "") {
                 i.classList.add("is-invalid");
             }
         });
-        return; // Exit function if validation fails
+        return;
     } else {
         // Remove 'is-invalid' class if the inputs are valid
         input.forEach(function (i) {
             i.classList.remove("is-invalid");
         });
 
-        // Create a unique ID for each note
-        const noteId = "note-" + Date.now(); // Unique ID based on current timestamp
+        const noteId = "note-" + Date.now();
 
         // Create the note card and append it to the note list
         let notelist = `
@@ -45,22 +41,19 @@ function addNote() {
             .getElementById("noteList")
             .insertAdjacentHTML("beforeend", notelist);
 
-        // Add note to the notes array with its expiration time
         notes.push({ id: noteId, expirationTime: new Date(date.value) });
 
-        // Clear the input fields
         title.value = "";
         note.value = "";
         date.value = "";
     }
 }
 
-// Function to delete a note
 function deleteNote(noteId) {
     let note = document.getElementById(noteId);
     if (note) {
         note.remove();
-        // Remove note from the notes array
+
         const index = notes.findIndex((n) => n.id === noteId);
         if (index !== -1) {
             notes.splice(index, 1);
@@ -68,13 +61,12 @@ function deleteNote(noteId) {
     }
 }
 
-// Function to periodically check if any note's time is up
 function checkNotes() {
-    const currentDate = new Date(); // Get the current date and time
+    const currentDate = new Date();
 
     notes.forEach((note) => {
         if (note.expirationTime <= currentDate) {
-            alert("TIME'S UP!");
+            swal("TIME'S UP!", "DO WHAT YOU HAVE TO DO!", "warning");
             deleteNote(note.id); // Remove the note if the time is up
         }
     });

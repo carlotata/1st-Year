@@ -20,7 +20,7 @@
                     <hr>
                     <div class="mb-3">
                         <label for="title" class="form-label">TITLE</label>
-                        <input id="title" type="text" class="form-control">
+                        <input id="title" type="text" class="form-control text-center">
                     </div>
                     <div class="mb-3">
                         <label for="note" class="form-label">TEXT</label>
@@ -28,7 +28,7 @@
                     </div>    
                     <div class="mb-3">
                         <label for="date" class="form-label">DATE</label>
-                        <input type="datetime-local" class="form-control" id="date" required>
+                        <input type="datetime-local" class="form-control mb-3" id="date" required>
                     </div>
 
                     <button type="button" class="btn btn-success mt-3" onclick="addNote()">ADD</button>
@@ -40,6 +40,7 @@
             </div>
         </div>
     </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
