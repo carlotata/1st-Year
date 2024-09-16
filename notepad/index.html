@@ -15,33 +15,31 @@
     <main>
         <div class="display flex container text-center" style="display: grid;">
             <div class="row shadow-lg bg-body-tertiary" style="border: 1px solid; border-radius: 20px; padding: 2rem; box-sizing: border-box;">
+                <div class="col p-3 shadow-lg mb-1 bg-body-tertiary" style="border-right:0.5px dotted; border-left: 0.5px dotted;">
+                    <h2 class="container text-center" style="color: rgb(1, 1, 90);">TAKE A NOTE...</h2>
+                    <hr>
+                    <div class="title row m-3 p-2">
+                        <label for="title">TITLE</label>
+                        <input id="title" type="text" class="form-control" style="height: 3rem; text-align: center;">
+                    </div>
+                    <div class="text row m-3 p-2">
+                        <label for="note">TEXT</label>
+                        <textarea id="note" rows="4" class="form-control" style="width: 100%;"></textarea>
+                    </div>    
+                    <div class="date row m-3 p-2">
+                        <label for="date" class="form-label">DATE</label>
+                        <input type="date" class="form-control" id="date" required placeholder="Mark a date...">
+                    </div>
 
-              <div class="col p-3 shadow-lg mb-1 bg-body-tertiary"  style="border-right:0.5px dotted; border-left: 0.5px dotted;">
-                <h2 class="container text-center" style="color: rgb(1, 1, 90);">
-                    TAKE A NOTE...
-                </h2><hr>
-                <div class="title row m-3 p-2">
-                    <label for="title">TITLE</label>
-                    <input id="title" type="text" style="height: 3rem; text-align: center;">
+                    <button type="button" class="btn btn-success mt-3" onclick="Note()">ADD</button>
                 </div>
-                <div class="text row m-3 p-2">
-                    <label for="note">TEXT</label>
-                    <textarea id="note" rows="4" style="width: 100%;"></textarea>
-                </div>    
-                <div class="date row m-3 p-2">
-                    <label for="date" class="form-label">DATE</label>
-                    <input type="date" class="form-control" id="date" required placeholder="Mark a date...">
-                </div>
-                <button type="button" class="btn btn-success" onclick="Note()">ADD</button>
-                </div>
-            <div class="col-md-6">
-                <h2 class="p-3" style="color: rgb(77, 0, 0);">Note List</h2>
-                <div id="noteList" class="task-container"></div>
+                <div class="col-md-6">
+                    <h2 class="p-3" style="color: rgb(77, 0, 0);">Note List</h2>
+                    <div id="noteList" class="task-container"></div>
                 </div>
             </div>
-
         </div>
-    </main>        
+    </main>
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 </html>
