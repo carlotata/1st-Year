@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="2calc.css">
+</head>
+<body>
+
+<div class="calculator">
+    <h1>BASIC CALCULATOR</h1>
+    <label for="num1">NUMBER 1</label>
+    <input id="num1" type="text">
+
+    <label for="num2">NUMBER 2</label>
+    <input id="num2" type="text">
+
+
+    <label for="result">RESULT</label>
+    <div id="result"></div>
+
+    <center>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    </center>
+    <button class="back"><a href="profile.html">BACK</a></button>
+</div>
+
+<script src="2calc.js"></script>
+</body>
+</html>

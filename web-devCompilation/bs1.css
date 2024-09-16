@@ -1,0 +1,31 @@
+body{
+    height: 100%;
+    margin: 1rem;
+}
+header{
+    background-color: rgb(202, 202, 202);
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.card{
+    width: 15rem;
+    margin: 3rem;
+    background-color: black;
+    border: 2px solid;
+    padding:   1px;
+}
+.card-body{
+    background-color: antiquewhite;
+}
+.tab-content{
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+.header{
+    border: 1px solid;
+    border-radius: 20px;
+}

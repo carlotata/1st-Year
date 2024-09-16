@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    background-image: url(carl.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    backdrop-filter: blur(4px);
+}
+.dropdown{
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    margin-right: 1%;
+}
+.dropdown button{
+    background-color: black;
+    color: bisque;
+    padding: 8px 13px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid;
+}
+.dropdown a{
+    display: block;
+    color: black;
+    font-size: 10px;
+    text-decoration: none;
+    padding: 5px;
+}
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: gray;
+    min-width: 5px;
+    box-shadow: 2px 2px 5px black;
+}
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown:hover button{
+    background-color: black;
+}
+.dropdown a:hover{
+    background-color: blanchedalmond;
+}
+
+.propayl {
+    margin: 0px;
+    padding: 20px;
+    background-color: black;
+    color: bisque;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: center;
+}
+.PROFILE{
+    text-decoration: none;
+    color: white;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+h3{
+    text-align: center;
+    color: white;
+}
+h4{
+    color: white;
+}
+pre{
+    
+    font-style: italic;
+    text-align: center;
+    color: white;
+}
+
+section {
+    padding: 50px;
+}
+
+.navbar {
+    border-bottom: solid;
+    border-top: solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar ul {
+    text-align: center;
+    list-style-type: none;
+    background-color: blanchedalmond;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    color: black;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: grey;
+}
+
+.gallery {
+    border-radius: 10px;
+    border: 2px solid;
+    box-sizing: border-box;
+    margin: 15px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery:hover {
+    transform: scale(1.05);
+    background-color: bisque;
+    .description{
+        color: black;
+    }
+}
+
+.carlota {
+    height: 300px;
+    width: 420px;
+}
+
+.description {
+    color: white;
+    margin-top: 5%;
+}
+
+.gal {
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .gal {
+        width: 100%;
+    }
+
+    .navbar a {
+        padding: 10px;
+    }
+}
+
+.school {
+    background-color: blanchedalmond;
+    padding: 12px;
+    border: 1px solid;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 20px;
+}
+
+.school:hover {
+    background-color: gray;
+}
+.school:active{
+    background-color: green;
+}
+
+.school1 {
+    margin: 0;
+    text-align: center;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding-bottom: 30px;
+    
+}
+.work {
+    margin: 8%;
+    border: 3px solid;
+    box-sizing: content-box;
+    width: fit-content;
+}
+.projects { 
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+.projects:hover {
+    transform: scale(1.1); 
+    background-color: blanchedalmond;
+    .description{
+        color: black;
+    }
+}
+img{
+    height: 200px;
+    width: 320px;
+}
+.description{
+    text-align: center;
+}
+.message {
+    margin: 5%;
+    font-style: oblique;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+.co{
+    font: 200;
+    text-decoration: underline black;
+    color: blanchedalmond;
+}
+.cont {
+    display: inline-block;
+    width: 100%; 
+    max-width: 50px;
+    padding: 2px;
+    margin: 1%;
+    height: auto; 
+    box-sizing: border-box; 
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+.cont:hover {
+    transform: scale(1.2); 
+}
+
+@media screen and (max-width: 768px) {
+    .cont {
+        width: 31%;
+        max-width: auto;
+    }
+}
+.hr{
+    border-top: 1px solid;
+    margin-left: 8%;
+    margin-right: 8%;
+}
