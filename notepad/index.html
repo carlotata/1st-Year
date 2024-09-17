@@ -42,14 +42,37 @@
                 required
               />
             </div>
-
-            <button
-              type="button"
-              class="btn btn-success mt-3"
-              onclick="addNote()"
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+              "
             >
-              ADD
-            </button>
+              <button
+                type="button"
+                class="btn btn-success mt-3"
+                onclick="addNote()"
+                style="
+                  display: flex;
+                  align-items: center; /* Center content vertically */
+                "
+              >
+                ADD
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger mt-3"
+                onclick="clearNote()"
+                style="
+                  display: flex;
+                  align-items: center; /* Center content vertically */
+                "
+              >
+                CLEAR
+              </button>
+            </div>
           </div>
           <div class="col-md-6 text-center">
             <h2 style="color: rgb(77, 0, 0); padding: 12px">Note List</h2>

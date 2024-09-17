@@ -1,11 +1,11 @@
 const notes = [];
+let title = document.getElementById("title");
+let note = document.getElementById("note");
+let date = document.getElementById("date");
+let notify = document.getElementById("outputDisplay");
+let input = [title, note, date];
 
 function addNote() {
-  let title = document.getElementById("title");
-  let note = document.getElementById("note");
-  let date = document.getElementById("date");
-  let input = [title, note, date];
-
   if (
     title.value === "" ||
     note.value === "" ||
@@ -44,11 +44,13 @@ function addNote() {
       .insertAdjacentHTML("beforeend", notelist);
 
     notes.push({ id: noteId, expirationTime: new Date(date.value) });
-
-    title.value = "";
-    note.value = "";
-    date.value = "";
   }
+  clearNote()
+}
+function clearNote() {
+  title.value = "";
+  note.value = "";
+  date.value = "";
 }
 
 function deleteNote(noteId) {
