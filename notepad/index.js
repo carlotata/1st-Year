@@ -6,22 +6,26 @@ function addNote() {
   let date = document.getElementById("date");
   let input = [title, note, date];
 
-  if (title.value === "" || note.value === "") {
+  if (
+    title.value === "" ||
+    note.value === "" ||
+    new Date(date.value) <= new Date()
+  ) {
     input.forEach(function (i) {
-      if (i.value === "") {
+      if (
+        i.value === "" ||
+        (i === date && new Date(date.value) <= new Date())
+      ) {
         i.classList.add("is-invalid");
       }
     });
     return;
   } else {
-    // Remove 'is-invalid' class if the inputs are valid
     input.forEach(function (i) {
       i.classList.remove("is-invalid");
     });
 
     const noteId = "note-" + Date.now();
-
-    // Create the note card and append it to the note list
     let notelist = `
             <div id="${noteId}" class="card mb-1">
                 <div class="card-body">
@@ -35,7 +39,6 @@ function addNote() {
             </div>
         `;
 
-    // Append the new note to the existing list
     document
       .getElementById("noteList")
       .insertAdjacentHTML("beforeend", notelist);
@@ -74,19 +77,20 @@ function checkNotes() {
 
   notes.forEach((note) => {
     if (note.expirationTime <= currentDate) {
-      sound.play(); // Play the sound when time is up
-
+      sound.play();
       swal({
         title: "TIME'S UP!",
         text: "DO WHAT YOU HAVE TO DO!",
         icon: "warning",
-        buttons: true, 
+        buttons: true,
       }).then((willDelete) => {
         if (willDelete) {
           sound.stop();
-          deleteNote(note.id); // Remove the note
+          deleteNote(note.id);
         }
       });
+
+      document.getElementById(note.id).style.backgroundColor = "lightcoral";
     }
   });
 }

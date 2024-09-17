@@ -9,18 +9,18 @@
       rel="stylesheet"
     />
   </head>
-  <body style="background-color: rgb(161, 135, 101); margin: 1rem">
+  <body style="background-color: rgb(161, 135, 101)">
     <header>
-      <h1 class="display-5 text-center p-4" style="color: rgb(71, 71, 71)">
+      <h1 class="display-5 text-center p-1" style="color: rgb(71, 71, 71)">
         Alarm.Pad
       </h1>
     </header>
 
     <main>
-      <div class="container">
+      <div class="container" style="margin: 0 auto">
         <div
           class="row shadow-lg bg-body-tertiary"
-          style="border: 1px solid; border-radius: 20px; padding: 2rem"
+          style="border-radius: 20px; padding: 2rem; border-color: burlywood"
         >
           <div class="col p-3 shadow-lg bg-body-tertiary">
             <h2 class="text-center" style="color: rgb(1, 1, 90)">Add a Note</h2>
@@ -52,8 +52,17 @@
             </button>
           </div>
           <div class="col-md-6 text-center">
-            <h2 class="p-3" style="color: rgb(77, 0, 0)">Note List</h2>
-            <div id="noteList" class="task-container"></div>
+            <h2 style="color: rgb(77, 0, 0); padding: 12px">Note List</h2>
+            <div
+              id="noteList"
+              class="task-container overflow-auto"
+              style="
+                max-height: 408px;
+                border-top: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 10px;
+              "
+            ></div>
           </div>
         </div>
       </div>
